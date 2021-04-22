@@ -1,0 +1,40 @@
+name	continent
+Afghanistan	Asia
+Albania	Europe
+Algeria	Africa
+Andorra	Europe
+Angola	Africa
+.
+.
+.
+.
+
+Find the country that starts with Y: 
+
+SELECT name FROM world WHERE name LIKE 'Y%'; 
+
+name
+Yemen 
+
+
+Find the countries that contain the letter x: 
+
+SELECT name FROM world WHERE name LIKE '%x%' ;   
+
+name
+Luxembourg
+Mexico 
+
+Find the countries that end with land: 
+
+SELECT name FROM world WHERE name LIKE '%land' ;  
+
+name
+Finland
+Iceland
+Ireland
+New Zealand
+Poland
+Swaziland
+Switzerland
+Thailand 
