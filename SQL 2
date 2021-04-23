@@ -1,0 +1,60 @@
+Find the countries that have "t" as the second character. 
+
+SELECT name FROM world WHERE name LIKE '_t%' 
+ORDER BY name;  
+
+name
+Ethiopia 
+Italy 
+
+Find the countries that have two "o" characters separated by two others. 
+
+SELECT name FROM world WHERE name LIKE '%o__o%' ORDER BY name; 
+
+name
+Congo, Democratic Republic of
+Congo, Republic of
+Lesotho
+Moldova
+Mongolia
+Morocco
+Sao Tomé and Príncipe 
+
+Find the countries that have exactly four characters. 
+
+SELECT name FROM world WHERE name LIKE '____' ORDER BY name;  
+
+name
+Chad
+Cuba
+Fiji
+Iran
+Iraq
+Laos
+Mali
+Oman
+Peru
+Togo
+ 
+ Find the country where the capital is the country plus "City" 
+ 
+ SELECT name FROM world WHERE capital = concat(name, ' City') ;  
+ 
+ name
+Guatemala
+Kuwait
+Mexico
+Panama
+
+
+Find the capital and the name where the capital is an extension of name of the country. 
+
+SELECT capital, name FROM world WHERE capital LIKE concat(name,'_%');  
+
+capital	name
+Andorra la Vella	Andorra
+Guatemala City	Guatemala
+Kuwait City	Kuwait
+Mexico City	Mexico
+Monaco-Ville	Monaco
+Panama City	Panama 
